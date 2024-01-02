@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>Галерея</h1>
+    </header>
+    <main class="main">
+        <div id="loader" class="loader">
+            <img src="images/preloader.gif" alt="preloader">
+        </div>
+        <button class="get-img-btn">Загрузить картинки</button>
+        <button class="clean-btn">Очистить галерею</button>
+        <div class="wrap"></div>
+    </main>
+    <footer class="footer"></footer>
+    <script>
+        window.onload = function() {
+            let preloader = document.getElementById('loader');
+            preloader.classList.add('hide-loader');
+            setInterval(function() {
+                preloader.classList.add('loader-hidden');
+            }, 990);
+        }
+    </script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
